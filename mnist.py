@@ -30,7 +30,7 @@ LR = 0.01
 # In[18]:
 
 
-train_data = torchvision.datasets.MNIST(root='./',train=False,download=True,transform=torchvision.transforms.ToTensor())
+train_data = torchvision.datasets.MNIST(root='./',train=True,download=False,transform=torchvision.transforms.ToTensor())
 test_data = torchvision.datasets.MNIST(root='./',train=False,transform=torchvision.transforms.ToTensor())
 train_loader = Data.DataLoader(dataset=train_data,batch_size=BATCH_SIZE,shuffle=True,num_workers=2)
 test_x = Variable(test_data.test_data.view(-1, 28*28)).type(torch.FloatTensor)
